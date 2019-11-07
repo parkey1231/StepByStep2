@@ -50,10 +50,17 @@ namespace StepByStep
                 Console.WriteLine(node.Value);
             }
             */
-            StaticClass.Dictionary.DoWork();
-            StaticClass.HashSet.DoWork();
-            StaticClass.List.DoWork();
+            //StaticClass.Dictionary.DoWork();
+            //StaticClass.HashSet.DoWork();
+            //StaticClass.List.DoWork();
 
+
+            StaticClass.Lambda lambda = new StaticClass.Lambda();
+            lambda.DoWork();
+
+            
         }
+
+
     }
 }

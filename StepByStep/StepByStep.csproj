@@ -47,6 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticClass\Dictionary.cs" />
     <Compile Include="StaticClass\HashSet.cs" />
+    <Compile Include="StaticClass\Lambda.cs" />
     <Compile Include="StaticClass\List.cs" />
   </ItemGroup>
   <ItemGroup>

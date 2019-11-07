@@ -39,10 +39,17 @@ namespace BinaryTreeTest
             tree3.Insert(2);
             tree3.Insert(12);
 
+     
+
             string sort1 = tree1.WalkTree();
             string sort2 = tree2.WalkTree();
             string sort3 = tree3.WalkTree();
-          
+            Console.WriteLine("================");
+
+            foreach (int item in tree1)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }
