@@ -1,9 +1,10 @@
 ﻿using System;
-
+using System.Collections;
+using System.Collections.Generic;
 
 namespace BinaryTree
 {
-    public class Tree<TItem> where TItem : IComparable<TItem>
+    public class Tree<TItem> : IEnumerable<TItem> where TItem : IComparable<TItem>
     {
         public TItem NodeData { set; get; }
         public Tree<TItem> LeftTree { get; set; }
@@ -88,6 +89,33 @@ namespace BinaryTree
             }
 
             return result;
+        }
+
+        IEnumerator<TItem> IEnumerable<TItem>.GetEnumerator()
+        {
+            //return new TreeEnumerator<TItem>(this);
+            if (this.LeftTree != null)
+            {
+                foreach (TItem item in this.LeftTree)
+                {
+                    yield return item;
+                }
+            }
+
+            yield return this.NodeData;
+
+            if(this.RightTree != null)
+            {
+                foreach (TItem item in this.RightTree)
+                {
+                    yield return item;
+                }
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

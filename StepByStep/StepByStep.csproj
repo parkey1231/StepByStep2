@@ -49,6 +49,7 @@
     <Compile Include="Score.cs" />
     <Compile Include="StaticClass\Dictionary.cs" />
     <Compile Include="StaticClass\HashSet.cs" />
+    <Compile Include="StaticClass\Lambda.cs" />
     <Compile Include="StaticClass\List.cs" />
     <Compile Include="Student.cs" />
   </ItemGroup>
